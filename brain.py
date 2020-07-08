@@ -10,6 +10,6 @@ def brain(x):
         x = cv.transform([x])
         pred = model.predict(x)
         if(pred > 0.5):
-            return f"Postive with confidence {pred}"
+            return f"Postive with confidence {round(pred[0][0]*100,2)}"
         else:
-            return f"Negative with confidence {pred}"
+            return f"Negative with confidence {round(100-pred[0][0]*100,2)}"
