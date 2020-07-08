@@ -7,4 +7,5 @@ MarkupSafe==1.1.1
 Werkzeug==1.0.1
 numpy==1.19.0
 Keras==2.4.3
+tensorflow2.0.0a0
 
