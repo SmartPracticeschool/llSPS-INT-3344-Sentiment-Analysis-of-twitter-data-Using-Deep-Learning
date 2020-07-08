@@ -12,4 +12,4 @@ def brain(x):
         if(pred > 0.5):
             return f"Postive with confidence {round(pred*100, 2)}"
         else:
-            return f"Negative with confidence {round(pred*100, 2)}"
+            return f"Negative with confidence {round(100-pred*100, 2)}"
