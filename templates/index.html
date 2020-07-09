@@ -17,9 +17,9 @@
 				<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
 			</form>
             <div class="result">
-                <h2>
-                    {{result}}
-                </h2>
+                {% if result|length %}
+		    <img src="static/{{ result }}" alt="result">
+		{% endif %}
             </div>
 		</div>
 	</header>
