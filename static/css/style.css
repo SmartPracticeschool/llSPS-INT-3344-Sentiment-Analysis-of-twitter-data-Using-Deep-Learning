@@ -1,47 +1,37 @@
-*{
-	margin: 0;
-	padding: 0;
-	font-family: Century Gothic;
 
-}
 .result{
-	position: absolute;
-	top: 60%;
-	left: 50%;
     margin-top:20px;
     display:flex;
     justify-content:center;
     color:white;
 }
-header{
-	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../static/a.jpg);
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../static/a.jpg);
 	height: 100vh;
+    width:100%;
 	background-size: cover;
     background-position: center;
 }
 
+.main{
+    display:flex;
+    justify-content:center;
+    height:100%;
+    width:100%;
+    flex-direction:column;
+}
+.form{
+    padding-right:20%;
+    padding-left:20%;
+}
 .title{
-	position: absolute;
-	top: 30%;
-	left:50%;
-	transform: translate(-50%,-50%);
+    padding-bottom:50px;
+    display:flex;
+    color:white;
+    justify-content:center;
 }
-.title h1{
-	color: #fff;
-	font-size: 70px;
-
-}
-.button{
-	position: absolute;
-	top: 50%;
-	left:50%;
-	width: 500px;
-	transform: translate(-50%,-50%);
-	border-bottom: white;
-}
-
 input[type=text]{
-	color: green;
+	color: white;
 	width: 100%;	
 	border-bottom: 1px solid red;
 
