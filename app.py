@@ -1,12 +1,13 @@
 
+import os
 from flask import Flask, request, jsonify, render_template
 from brain import brain
 
 app = Flask(__name__)
 @app.route('/')
 def home():
-    err = brain(sentiment)
-    if err == 0 or err == 1 : err = ''
+    err = "Saved Model Doesn't Exist"
+    if os.path.isfile('./model.h5'): err = ''
     return render_template('index.html', result = err)
 @app.route('/',methods=['POST'])
 def y_predict():
