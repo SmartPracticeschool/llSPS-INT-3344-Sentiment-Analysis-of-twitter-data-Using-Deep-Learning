@@ -18,7 +18,9 @@
 				<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
 			</form>
             <div class="result">
-                {% if result|length %}
+                {% if err|length %}
+		    <h2 style="color:#fff;"> {{err}} </h2>
+		{% else %}
 		    <img width="250" height="250" src="static/{{ result }}" alt="result">
 		{% endif %}
 	   </div>
