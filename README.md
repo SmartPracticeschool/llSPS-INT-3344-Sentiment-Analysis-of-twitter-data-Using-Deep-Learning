@@ -1,8 +1,8 @@
 # llSPS-INT-3344-Sentiment-Analysis-of-twitter-data-Using-Deep-Learning
 
 <p align="middle">
-  <img src="Output.png" width="150" />
-  <img src="Output..png" width="150" /> 
+  <img src="Output.png" width="450" />
+  <img src="Output..png" width="450" /> 
 </p>
 
 #### Category: Deep Learning
