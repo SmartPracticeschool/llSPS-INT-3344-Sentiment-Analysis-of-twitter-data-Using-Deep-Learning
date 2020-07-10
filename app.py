@@ -12,9 +12,12 @@ def home():
 @app.route('/',methods=['POST'])
 def y_predict():
     sentiment = request.form["Message"]
-    err = str(brain(sentiment))
-    if err == 0 or err == 1 : err = ''
-    return render_template('index.html', result = err + '.png', err = err)
+    err, res = str(brain(sentiment)), ''
+
+    if err == 0 or err == 1 : 
+        res, err = str(err), res
+
+    return render_template('index.html', result = res + '.png', err = err)
 if __name__=="__main__":
     app.run()
 
