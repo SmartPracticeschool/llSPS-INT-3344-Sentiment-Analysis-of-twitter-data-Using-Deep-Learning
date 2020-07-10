@@ -2,26 +2,30 @@
 <html>
 <head>
 	<title>Sentiment Analysis of twitter data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../static/css/style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body >
-	<header >
+    <div class="main">
 		<div class="title">
 			<h1>Sentiment Analysis</h1>		
 		</div>
-		<div class="button">
+        <div class="form">
 			<form action="{{ url_for('y_predict')}}"method="post">
 				<p><input type="text" class= "btn" name="Message" placeholder="Enter your message"  required="required" /></p>
 				<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
 			</form>
             <div class="result">
-                {% if result|length %}
-		    <img src="static/{{ result }}" alt="result">
+                {% if err|length %}
+		    <h2 style="color:#fff;"> Error : {{err}} </h2>
+		{% else %}
+		    <img width="250" height="250" src="static/{{ result }}" alt="result">
 		{% endif %}
-            </div>
-		</div>
-	</header>
+	   </div>
+	</div>
+    </div>
+
 </body>
 </html>

@@ -1,9 +1,11 @@
+import os
+
 import pickle
 import numpy as np
-from keras.models import load_model
-
+from tensorflow.keras.models import load_model
 
 def brain(x):
+    if not os.path.isfile('./model.h5'): return "Unable to find Saved Model"
     model = load_model('model.h5')
     with open('cv.pkl', 'rb') as file:
         cv = pickle.load(file)
